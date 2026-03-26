@@ -77,7 +77,6 @@ int main()
 	printf("\tPercentual Maior que 60\t\t%.0f%%\n", perclir60);
 	printf("===================================================\n");
 
-    // NOVA PARTE (sem alterar o resto)
     printf("\nDigite 1 para mostrar os pacientes ou qualquer outra tecla para fechar: ");
     scanf("%d", &opcao);
 
