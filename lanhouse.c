@@ -48,5 +48,6 @@ int main()
     
     printf("\nTotal arrecadado: R$ %.2f\n", total);
     
+    
     return 0;
 }
