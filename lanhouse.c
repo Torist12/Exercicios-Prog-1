@@ -29,8 +29,10 @@ int main()
     for(i=0; i<15; i++)
     {
         pc[i] = rand() % 3 + 1; //inicializando o randomizador do PC
-        gerar_tempo_aleatorio(&horas[i], &minutos[i]);
-        tempo[i] = horas[i] + minutos[i] / 60.0;
+
+        gerar_tempo_aleatorio(&horas[i], &minutos[i]);//gerando o tempo aleatorio para cada PC
+
+        tempo[i] = horas[i] + minutos[i] / 60.0;//convertendo o tempo para horas decimais
         
         // Calcular valor baseado no tipo de PC
         if(pc[i] == 1) {
@@ -41,13 +43,12 @@ int main()
             valor[i] = tempo[i] * price3;
         }
         
-        total += valor[i];
+        total += valor[i];//acumulando o total arrecadado
         
         printf("\nPC %d: Tipo %d, Tempo: %d horas e %d minutos (%.2f horas), Valor: R$ %.2f\n", i+1, pc[i], horas[i], minutos[i], tempo[i], valor[i]);
     }
     
     printf("\nTotal arrecadado: R$ %.2f\n", total);
-    
     
     return 0;
 }
